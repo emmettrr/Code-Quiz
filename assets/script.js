@@ -1,4 +1,3 @@
-var quiz = document.getElementById('quiz')
 var startButton = document.getElementById('startButton')
 var timer = document.getElementById('timer')
 var secondsLeft = 75;
@@ -15,3 +14,10 @@ function setTime() {
 }
 
 startButton.addEventListener('click', setTime)
+
+var questions = [
+    new question ("What is my name?", ["Kyle", "Taylor", "Emmett", "Brandon"], "Emmett"),
+    new question ("What is my name?", ["Kyle", "Taylor", "Emmett", "Brandon"], "Emmett"),
+    new question ("What is my name?", ["Kyle", "Taylor", "Emmett", "Brandon"], "Emmett"),
+    new question ("What is my name?", ["Kyle", "Taylor", "Emmett", "Brandon"], "Emmett")
+]
