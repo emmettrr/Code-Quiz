@@ -18,7 +18,7 @@ startButton.addEventListener('click', setTime)
 function Quiz(questions) {
     this.score = 75;
     this.questions = questions;
-    this.questionIndex = 0;
+    this.questionPosition = 0;
 }
 
 
@@ -45,3 +45,9 @@ var questions = [
     answer: "Emmett"
     }
 ]
+
+var score = 0;
+var questionPosition = 0;
+var quiz = getElementById("quiz")
+var questions = getElementById('questions')
+var options = getElementById('options')
