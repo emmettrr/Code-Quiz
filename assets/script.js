@@ -1,4 +1,3 @@
-var quizContainer = document.getElementById("#quiz")
-var results = document.getElementById('#results')
-var submitButton = document.getElementById('#submit')
+var quiz = document.getElementById('quiz')
+var startButton = document.getElementById('startButton')
 
