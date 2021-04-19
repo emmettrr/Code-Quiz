@@ -7,17 +7,7 @@ var questionPosition = 0;
 var quiz = getElementById("quiz")
 var questions = getElementById('questions')
 var options = getElementById('options')
-
-function setTime() {
-    timerInterval = setInterval(function() {
-        secondsLeft--;
-        timer.textContent= "Time:" + secondsLeft;
-
-        if(secondsLeft === 0) {
-            clearInterval(timerInterval);
-        }
-    }, 1000)
-}
+var intro = getElementById('intro')
 
 var questions = [
     {
@@ -41,3 +31,22 @@ var questions = [
     answer: "Emmett"
     }
 ]
+
+function startQuiz () {
+    startButton.addEventListener("click")
+    document.getElementById('intro').hidden=true;
+    startButton.hidden = true;
+    setTime();
+    startQuiz();
+}
+
+function setTime() {
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        timer.textContent= "Time:" + secondsLeft;
+
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+        }
+    }, 1000)
+}
