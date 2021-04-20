@@ -48,9 +48,9 @@ var quest = [
         console.log(startButton);
         document.getElementById('intro').hidden=true;
         document.getElementById('startButton').hidden=true;
-        document.getElementsByTagName("ol")[0].removeAttribute('hidden');
+        document.getElementsByTagName("div")[0].removeAttribute('display: none');
         setTime();
-        quiz();
+        showQuestions();
     })
 
 function setTime() {
@@ -63,8 +63,21 @@ function setTime() {
     }, 1000)
 }
 
-function quiz () {
-    questions.textContent = quest[0].quest
+var runningQuestionIndex = questions.length - 1
+var runningQuestionIndex = 0
 
+function showQuestions() {
+    if(runningQuestionIndex > lastQuestionIndex){
+        quiz.style.display = "none"
+        highscores.style.display = "block"
+        score.innerHTML = "Your final score" + " " + counter
+    }else{
+    var q = questions[runningQuestionIndex]
+    question.innerHTML = "<p>" +q.question+ "</p>"
+    option1.innerHTML = q.option1
+    option2.innerHTML = q.option2
+    option3.innerHTML = q.option3
+    option4.innerHTML = q.option4
+    }
 }
 
