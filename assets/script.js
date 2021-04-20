@@ -5,7 +5,6 @@ var secondsLeft = 75;
 var penalty = 10;
 var score = 0;
 var questionPosition = 0;
-var quiz = getElementById("quiz")
 var questions = getElementById('questions')
 var option1 = getElementById('option1')
 var option2 = getElementById('option2')
@@ -45,12 +44,12 @@ var questions = [
     },
 ]
 
-    startButton.addEventListener("click", function(run) {
+    startButton.addEventListener("click", function() {
     document.getElementById('intro').hidden=true;
     document.getElementById('startButton').hidden=true;
     ol.removeAttribute('hidden');
     setTime();
-    startQuiz();
+    intro();
     })
 
 function setTime() {
