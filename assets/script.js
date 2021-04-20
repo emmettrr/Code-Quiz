@@ -2,9 +2,6 @@ var startButton = document.getElementById('startButton')
 var timer = document.getElementById('timer')
 var secondsLeft = 75;
 var optionBox = document.querySelector('.options')
-var penalty = 10;
-var score = 0;
-var questionPosition = 0;
 var questions = document.getElementById('questions')
 var option1 = document.getElementById('option1')
 var option2 = document.getElementById('option2')
@@ -71,9 +68,9 @@ function showQuestions() {
         quiz.style.display = "none"
         finalScore.style.display = "block"
         finalScore.innerHTML = "Your final score" + " " + counter
-    }else {
+    } else {
     var q = questions[runningQuestionIndex]
-    question.innerHTML = "<p>" +q.question+ "</p>"
+    question.innerHTML = "<div>" +q.question+ "</div>"
     option1.innerHTML = q.option1
     option2.innerHTML = q.option2
     option3.innerHTML = q.option3
