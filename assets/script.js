@@ -6,13 +6,16 @@ var score = 0;
 var questionPosition = 0;
 var quiz = getElementById("quiz")
 var questions = getElementById('questions')
-var options = getElementById('options')
+var option1 = getElementById('option1')
+var option2 = getElementById('option2')
+var option3 = getElementById('option3')
+var option4 = getElementById('option4')
 var intro = getElementById('intro')
 
 var questions = [
     {
     quest: "What is my name?",
-    choices: ["Brandon", "Kyle", "Timmy", "Emmett"],
+    choice,
     answer: "Emmett"
     },
     {
