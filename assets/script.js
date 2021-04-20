@@ -2,7 +2,7 @@ var startButton = document.getElementById('startButton')
 var timer = document.getElementById('timer')
 var secondsLeft = 75;
 var optionBox = document.querySelector('.options')
-var questions = document.getElementById('questions')
+var selectedQuestions = document.getElementById('question')
 var option1 = document.getElementById('option1')
 var option2 = document.getElementById('option2')
 var option3 = document.getElementById('option3')
@@ -45,7 +45,7 @@ var questions = [
         console.log(startButton);
         document.getElementById('quiz').hidden=true;
         document.getElementById('startButton').hidden=true;
-        document.getElementsByTagName("div")[0].removeAttribute('display: none');
+        document.getElementsByTagName("div")[0].style.display= "block";
         setTime();
         showQuestions();
     })
@@ -70,7 +70,7 @@ function showQuestions() {
         finalScore.innerHTML = "Your final score" + " " + counter
     } else {
     var q = questions[runningQuestionIndex]
-    question.innerHTML = "<div>" +q.question+ "</div>"
+    selectedQuestions.innerHTML = q.questions
     option1.innerHTML = q.option1
     option2.innerHTML = q.option2
     option3.innerHTML = q.option3
