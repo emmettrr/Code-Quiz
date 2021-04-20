@@ -12,16 +12,19 @@
         <a href="/score.html">High Score</a>
         <span id='timer'>Time:0</span>
     </nav>
-    <h3 id= "intro">This is your coding quiz. Click start when you're ready! Good luck!</h3>
+    <h3 id= "intro" data-state="visible">This is your coding quiz. Click start when you're ready! Good luck!</h3>
+    <div id= "start">
     <button id= "startButton">Start</button>
+    </div>
 </header>
 <body>
 <div id= "quiz">
-    <p id= "questions"></p>
-    <li id= "option1"></li>
-    <li id= "option2"></li>
-    <li id= "option3"></li>
-    <li id= "option4"></li>
+    <ol hidden class="container" id= "questions">
+    <li class= "options" id= "option1" data-choice="option1"></li>
+    <li class= "options" id= "option2" data-choice="option1"></li>
+    <li class= "options" id= "option3" data-choice="option1"></li>
+    <li class= "options" id= "option4" data-choice="option1"></li>
+    </ol>
 </div>
 <script src="./assets/script.js"></script>
 </body>

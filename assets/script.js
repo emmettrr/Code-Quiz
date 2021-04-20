@@ -1,5 +1,6 @@
 var startButton = document.getElementById('startButton')
 var timer = document.getElementById('timer')
+var startQuiz = document.getElementById('quiz')
 var secondsLeft = 75;
 var penalty = 10;
 var score = 0;
@@ -44,13 +45,12 @@ var questions = [
     },
 ]
 
-function startQuiz () {
-    startButton.addEventListener("click")
+    startButton.addEventListener("click", function(run) {
     document.getElementById('intro').hidden=true;
     startButton.hidden = true;
     setTime();
     startQuiz();
-}
+    }
 
 function setTime() {
     timerInterval = setInterval(function() {
