@@ -12,7 +12,7 @@ var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var intro = document.getElementById('intro')
 
-var questions = [
+var quest = [
     {
     quest: "What is my name?",
     option1: "Kyle",
@@ -48,9 +48,9 @@ var questions = [
         console.log(startButton);
         document.getElementById('intro').hidden=true;
         document.getElementById('startButton').hidden=true;
-        questions.removeAttribute('hidden');
+        document.getElementsByTagName("ol")[0].removeAttribute('hidden');
         setTime();
-        intro();
+        quiz();
     })
 
 function setTime() {
@@ -63,14 +63,8 @@ function setTime() {
     }, 1000)
 }
 
-optionBox[0].addEventListener('click', function() {
-    console.log(optionBox);
-    if (questions) [questionPosition].option1 == questions(questionPosition).answer; {
-        console.log ("correct!")
-    }
+function quiz () {
+    questions.textContent = quest[0].quest
 
-    questionPosition ++;
-    questions()
-     
-})
+}
 
