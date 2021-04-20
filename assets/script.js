@@ -15,24 +15,33 @@ var intro = getElementById('intro')
 var questions = [
     {
     quest: "What is my name?",
-    choice,
+    option1: "Kyle",
+    option2: "Emmett",
+    option3: "Brandon",
+    option4: "Kent",
+    answer: "Emmett"
+    },{
+    quest: "What is my name?",
+    option1: "Kyle",
+    option2: "Emmett",
+    option3: "Brandon",
+    option4: "Kent",
+    answer: "Emmett"
+    },{
+    quest: "What is my name?",
+    option1: "Kyle",
+    option2: "Emmett",
+    option3: "Brandon",
+    option4: "Kent",
+    answer: "Emmett"
+    },{
+    quest: "What is my name?",
+    option1: "Kyle",
+    option2: "Emmett",
+    option3: "Brandon",
+    option4: "Kent",
     answer: "Emmett"
     },
-    {
-    quest: "What is my name?",
-    choices: ["Brandon", "Kyle", "Timmy", "Emmett"],
-    answer: "Emmett"
-    },
-    {
-    quest: "What is my name?",
-    choices: ["Brandon", "Kyle", "Timmy", "Emmett"],
-    answer: "Emmett"
-    },
-    {
-    quest: "What is my name?",
-    choices: ["Brandon", "Kyle", "Timmy", "Emmett"],
-    answer: "Emmett"
-    }
 ]
 
 function startQuiz () {
