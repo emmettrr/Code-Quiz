@@ -1,16 +1,15 @@
 var startButton = document.getElementById('startButton')
 var timer = document.getElementById('timer')
-var startQuiz = document.getElementById('quiz')
 var secondsLeft = 75;
 var penalty = 10;
 var score = 0;
 var questionPosition = 0;
-var questions = getElementById('questions')
-var option1 = getElementById('option1')
-var option2 = getElementById('option2')
-var option3 = getElementById('option3')
-var option4 = getElementById('option4')
-var intro = getElementById('intro')
+var questions = document.getElementById('questions')
+var option1 = document.getElementById('option1')
+var option2 = document.getElementById('option2')
+var option3 = document.getElementById('option3')
+var option4 = document.getElementById('option4')
+var intro = document.getElementById('intro')
 
 var questions = [
     {
@@ -45,19 +44,20 @@ var questions = [
 ]
 
     startButton.addEventListener("click", function() {
-    document.getElementById('intro').hidden=true;
-    document.getElementById('startButton').hidden=true;
-    ol.removeAttribute('hidden');
-    setTime();
-    intro();
+        console.log(startButton);
+        document.getElementById('intro').hidden=true;
+        document.getElementById('startButton').hidden=true;
+        questions.removeAttribute('hidden');
+        // setTime();
+        // intro();
     })
 
 function setTime() {
     timerInterval = setInterval(function() {
-        secondsLeft--;
-        timer.textContent= "Time:" + secondsLeft;
-        if(secondsLeft === 0) {
-            clearInterval(timerInterval);
-        }
+    secondsLeft--;
+    timer.textContent= "Time:" + secondsLeft;
+    if(secondsLeft === 0) {
+    clearInterval(timerInterval);
+    }
     }, 1000)
 }
