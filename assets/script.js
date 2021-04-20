@@ -81,3 +81,13 @@ function showQuestions() {
     }
 }
 
+function checkAnswer(answer){
+    if(questions[runningQuestionIndex].correct == answer){
+        runningQuestionIndex++
+        showQuestions()
+    } else {
+     counter = counter - 10
+     runningQuestionIndex++
+     showQuestions()
+    }
+}

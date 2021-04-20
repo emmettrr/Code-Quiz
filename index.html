@@ -17,10 +17,10 @@
 </header>
 <body>
     <div style= "display: none" id= "questions">
-    <button class= "options" id= "option1"></button>
-    <button class= "options" id= "option2"></button>
-    <button class= "options" id= "option3"></button>
-    <button class= "options" id= "option4"></button>
+    <button class= "options" id= "option1" onclick="checkAnswer('A')"></button>
+    <button class= "options" id= "option2" onclick="checkAnswer('B')"></button>
+    <button class= "options" id= "option3" onclick="checkAnswer('C')"></button>
+    <button class= "options" id= "option4" onclick="checkAnswer('D')"></button>
     </div>
 <p id="finalScore" style= "display: none;">Your final score is: <span id="score"></span></p>
         <form id="submit-form" method="POST" action="/assets/score.html" >
