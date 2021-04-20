@@ -1,6 +1,7 @@
 var startButton = document.getElementById('startButton')
 var timer = document.getElementById('timer')
 var secondsLeft = 75;
+var optionBox = document.querySelector('.options')
 var penalty = 10;
 var score = 0;
 var questionPosition = 0;
@@ -43,7 +44,7 @@ var questions = [
     },
 ]
 
-    startButton.addEventListener("click", function() {
+    startButton.addEventListener('click', function() {
         console.log(startButton);
         document.getElementById('intro').hidden=true;
         document.getElementById('startButton').hidden=true;
@@ -61,3 +62,14 @@ function setTime() {
     }
     }, 1000)
 }
+
+optionBox[0].addEventListener('click', function() {
+    console.log(optionBox);
+    if (questions) [questionPosition].option1 == questions(questionPosition).answer; {
+        console.log ("correct!")
+    }
+
+    questionPosition ++;
+    questions()
+     
+})
