@@ -26,6 +26,14 @@
     <li class= "options" id= "option4" data-choice="option1"></li>
     </ol>
 </div>
+<p id="finalScore" hidden>Your final score is: <span id="score"></span></p>
+        <form id="submit-form" method="POST" action="/score.html" >
+            <div class="input-initials">
+              <label for="initials">Enter initials: </label>
+              <input type="text" name="initials" id="initials"/>
+            </div>
+            <button id="submit">submit</button>
+        </form>
 <script src="./assets/script.js"></script>
 </body>
 </html>

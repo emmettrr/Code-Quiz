@@ -47,16 +47,16 @@ var questions = [
 
     startButton.addEventListener("click", function(run) {
     document.getElementById('intro').hidden=true;
-    startButton.hidden = true;
+    document.getElementById('startButton').hidden=true;
+    ol.removeAttribute('hidden');
     setTime();
     startQuiz();
-    }
+    })
 
 function setTime() {
     timerInterval = setInterval(function() {
         secondsLeft--;
         timer.textContent= "Time:" + secondsLeft;
-
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
         }
