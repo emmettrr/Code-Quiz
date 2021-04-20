@@ -49,8 +49,8 @@ var questions = [
         document.getElementById('intro').hidden=true;
         document.getElementById('startButton').hidden=true;
         questions.removeAttribute('hidden');
-        // setTime();
-        // intro();
+        setTime();
+        intro();
     })
 
 function setTime() {
@@ -73,3 +73,4 @@ optionBox[0].addEventListener('click', function() {
     questions()
      
 })
+
