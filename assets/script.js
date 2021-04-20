@@ -63,7 +63,7 @@ function setTime() {
     }, 1000)
 }
 
-var runningQuestionIndex = questions.length - 1
+var lastQuestionIndex = questions.length - 1
 var runningQuestionIndex = 0
 
 function showQuestions() {

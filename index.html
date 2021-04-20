@@ -16,11 +16,11 @@
     <button id= "startButton">Start</button>
 </header>
 <body>
-    <div style= "display: none" id= "questions">
-    <button class= "options" id= "option1" onclick="checkAnswer('A')"></button>
-    <button class= "options" id= "option2" onclick="checkAnswer('B')"></button>
-    <button class= "options" id= "option3" onclick="checkAnswer('C')"></button>
-    <button class= "options" id= "option4" onclick="checkAnswer('D')"></button>
+    <div id= "questions" style="display:none">
+    <button class= "options" id= "option1" onclick="checkAnswer('option1')"></button>
+    <button class= "options" id= "option2" onclick="checkAnswer('option2')"></button>
+    <button class= "options" id= "option3" onclick="checkAnswer('option3')"></button>
+    <button class= "options" id= "option4" onclick="checkAnswer('option4')"></button>
     </div>
 <p id="finalScore" style= "display: none;">Your final score is: <span id="score"></span></p>
         <form id="submit-form" method="POST" action="/assets/score.html" >
