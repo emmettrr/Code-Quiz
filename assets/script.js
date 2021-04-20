@@ -10,32 +10,32 @@ var option1 = document.getElementById('option1')
 var option2 = document.getElementById('option2')
 var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
-var intro = document.getElementById('intro')
+var quiz = document.getElementById('quiz')
 
-var quest = [
+var questions = [
     {
-    quest: "What is my name?",
+    questions: "What is my name?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
     answer: "Emmett"
     },{
-    quest: "What is my name?",
+    questions: "What is my name?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
     answer: "Emmett"
     },{
-    quest: "What is my name?",
+    questions: "What is my name?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
     answer: "Emmett"
     },{
-    quest: "What is my name?",
+    questions: "What is my name?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
@@ -46,7 +46,7 @@ var quest = [
 
     startButton.addEventListener('click', function() {
         console.log(startButton);
-        document.getElementById('intro').hidden=true;
+        document.getElementById('quiz').hidden=true;
         document.getElementById('startButton').hidden=true;
         document.getElementsByTagName("div")[0].removeAttribute('display: none');
         setTime();
@@ -69,9 +69,9 @@ var runningQuestionIndex = 0
 function showQuestions() {
     if(runningQuestionIndex > lastQuestionIndex){
         quiz.style.display = "none"
-        highscores.style.display = "block"
-        score.innerHTML = "Your final score" + " " + counter
-    }else{
+        finalScore.style.display = "block"
+        finalScore.innerHTML = "Your final score" + " " + counter
+    }else {
     var q = questions[runningQuestionIndex]
     question.innerHTML = "<p>" +q.question+ "</p>"
     option1.innerHTML = q.option1
