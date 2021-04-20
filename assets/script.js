@@ -16,7 +16,7 @@ var questions = [
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
-    answer: "Emmett"
+    answer: "option2"
     },{
     questions: "What is my name?",
     option1: "Kyle",
@@ -64,6 +64,7 @@ var lastQuestionIndex = questions.length - 1
 var runningQuestionIndex = 0
 
 function showQuestions() {
+    console.log("re-runquestion",runningQuestionIndex)
     if(runningQuestionIndex > lastQuestionIndex){
         quiz.style.display = "none"
         finalScore.style.display = "block"
@@ -79,11 +80,15 @@ function showQuestions() {
 }
 
 function checkAnswer(answer){
-    if(questions[runningQuestionIndex].correct == answer){
+    console.log (runningQuestionIndex)
+    console.log('answer', answer)
+    console.log(questions[runningQuestionIndex])
+    if(questions[runningQuestionIndex].answer === answer){
+        console.log('answer', answer)
         runningQuestionIndex++
         showQuestions()
     } else {
-     counter = counter - 10
+     counter = secondsLeft - 10
      runningQuestionIndex++
      showQuestions()
     }
