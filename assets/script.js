@@ -18,21 +18,21 @@ var questions = [
     option4: "Kent",
     answer: "option2"
     },{
-    questions: "What is my name?",
+    questions: "What is my namee?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
     answer: "Emmett"
     },{
-    questions: "What is my name?",
+    questions: "What is my nameee?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
     answer: "Emmett"
     },{
-    questions: "What is my name?",
+    questions: "What is my nameeee?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
@@ -55,6 +55,7 @@ function setTime() {
     secondsLeft--;
     timer.textContent= "Time:" + secondsLeft;
     if(secondsLeft === 0) {
+        alert("Sorry, we are out of time!")
     clearInterval(timerInterval);
     }
     }, 1000)
@@ -64,11 +65,16 @@ var lastQuestionIndex = questions.length - 1
 var runningQuestionIndex = 0
 
 function showQuestions() {
-    console.log("re-runquestion",runningQuestionIndex)
     if(runningQuestionIndex > lastQuestionIndex){
         quiz.style.display = "none"
         finalScore.style.display = "block"
-        finalScore.innerHTML = "Your final score" + " " + counter
+        finalScore.innerHTML = "Your final score" + " " + secondsLeft
+        submit.addEventListener("click", save)
+        function save(){
+        localStorage.setItem("playerScore", counter)
+        localStorage.setItem("playerInitials", initials)
+        location.reload()
+        }
     } else {
     var q = questions[runningQuestionIndex]
     selectedQuestions.innerHTML = q.questions
