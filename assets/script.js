@@ -84,7 +84,7 @@ function checkAnswer(answer){
         runningQuestionIndex++
         showQuestions()
     } else {
-        counter = timerInterval - 10
+        timerInterval = secondsLeft - 10
         runningQuestionIndex++
         showQuestions()
     }
