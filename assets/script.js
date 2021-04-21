@@ -69,6 +69,13 @@ function showQuestions() {
         quiz.style.display = "none"
         finalScore.style.display = "block"
         finalScore.innerHTML = "Your final score" + " " + secondsLeft
+        submit.addEventListener("click", save)
+        function save(){
+        var initials = document.getElementById("initials").value
+        localStorage.setItem("playerScore", counter)
+        localStorage.setItem("playerInitials", initials)
+        location.reload()
+        }
     } else {
     var q = questions[runningQuestionIndex]
     selectedQuestions.innerHTML = q.questions
