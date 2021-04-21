@@ -8,6 +8,8 @@ var option2 = document.getElementById('option2')
 var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var quiz = document.getElementById('quiz')
+var wrong = new audio('/assets/audio/wrong.mp3')
+var right = new audio('/assets/audio/right.mp3')
 
 var questions = [
     {
@@ -69,12 +71,6 @@ function showQuestions() {
         quiz.style.display = "none"
         finalScore.style.display = "block"
         finalScore.innerHTML = "Your final score" + " " + secondsLeft
-        submit.addEventListener("click", save)
-        function save(){
-        localStorage.setItem("playerScore", counter)
-        localStorage.setItem("playerInitials", initials)
-        location.reload()
-        }
     } else {
     var q = questions[runningQuestionIndex]
     selectedQuestions.innerHTML = q.questions
@@ -90,12 +86,14 @@ function checkAnswer(answer){
     console.log('answer', answer)
     console.log(questions[runningQuestionIndex])
     if(questions[runningQuestionIndex].answer === answer){
+        correct.play()
         console.log('answer', answer)
         runningQuestionIndex++
         showQuestions()
     } else {
-     counter = secondsLeft - 10
-     runningQuestionIndex++
-     showQuestions()
+        wrong.play()
+        counter = secondsLeft - 10
+        runningQuestionIndex++
+        showQuestions()
     }
 }
