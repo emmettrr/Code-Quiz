@@ -8,8 +8,8 @@ var option2 = document.getElementById('option2')
 var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var quiz = document.getElementById('quiz')
-var wrong = new audio('/assets/audio/wrong.mp3')
-var right = new audio('/assets/audio/right.mp3')
+var wrong = new Audio('./assets/audio/wrong.mp3')
+var right = new Audio('./assets/audio/right.mp3')
 
 var questions = [
     {
@@ -18,7 +18,7 @@ var questions = [
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
-    answer: "option2"
+    answer: "Emmett"
     },{
     questions: "What is my namee?",
     option1: "Kyle",
@@ -82,17 +82,13 @@ function showQuestions() {
 }
 
 function checkAnswer(answer){
-    console.log (runningQuestionIndex)
-    console.log('answer', answer)
-    console.log(questions[runningQuestionIndex])
     if(questions[runningQuestionIndex].answer === answer){
-        correct.play()
-        console.log('answer', answer)
+        right.play()
         runningQuestionIndex++
         showQuestions()
     } else {
         wrong.play()
-        counter = secondsLeft - 10
+        counter = timerInterval - 10
         runningQuestionIndex++
         showQuestions()
     }
