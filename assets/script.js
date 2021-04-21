@@ -8,8 +8,6 @@ var option2 = document.getElementById('option2')
 var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var quiz = document.getElementById('quiz')
-var wrong = new Audio('./assets/audio/wrong.mp3')
-var right = new Audio('./assets/audio/right.mp3')
 
 var questions = [
     {
@@ -83,11 +81,9 @@ function showQuestions() {
 
 function checkAnswer(answer){
     if(questions[runningQuestionIndex].answer === answer){
-        right.play()
         runningQuestionIndex++
         showQuestions()
     } else {
-        wrong.play()
         counter = timerInterval - 10
         runningQuestionIndex++
         showQuestions()
