@@ -23,20 +23,14 @@
     <button class= "options" id= "option3" onclick="checkAnswer('option3')"></button>
     <button class= "options" id= "option4" onclick="checkAnswer('option4')"></button>
     </div>
-    <div id="highscores" style = "display: none;">
-        <div id="score"></div>
-        <form>
-            <label for="input">Enter Initials:</label>
-            <input type = "text" id = "initials" name = "input">
+<p id="finalScore" style= "display: none;">Your final score is: <span id="score"></span></p>
+        <form id="submit-form" method="POST" action="/assets/score.html" >
+            <div class="input-initials">
+              <label for="initials">Enter initials: </label>
+              <input type="text" name="initials" id="initials"/>
+            </div>
+            <button id="submit">Submit</button>
         </form>
-        <button type="button" id="submit">Submit</button>
-    </div>
-
-<!--seperate highscore page-->
-    <div id="HSpage" style = "display: none;">
-        <div id="topScore"></div>
-        <div id="nameI"></div>
-    </div>
 <script src="./assets/script.js"></script>
 </body>
 </html>
