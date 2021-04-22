@@ -104,5 +104,5 @@ submitButton.addEventListener('click', function(event) {
         secondsLeft: secondsLeft.value,
     }
     localStorage.setItem('initials', JSON.stringify(initials));
-    localStorage.setItem('secondsLeft', secondsLeft);
+    localStorage.setItem('userScore', secondsLeft);
 })
