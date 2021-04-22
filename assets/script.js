@@ -16,28 +16,28 @@ var questions = [
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
-    answer: "Emmett"
+    answer: "option2"
     },{
     questions: "What is my namee?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
-    answer: "Emmett"
+    answer: "option2"
     },{
     questions: "What is my nameee?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
-    answer: "Emmett"
+    answer: "option2"
     },{
     questions: "What is my nameeee?",
     option1: "Kyle",
     option2: "Emmett",
     option3: "Brandon",
     option4: "Kent",
-    answer: "Emmett"
+    answer: "option2"
     },
 ]
 
@@ -89,7 +89,7 @@ function checkAnswer(answer){
         runningQuestionIndex++
         showQuestions()
     } else {
-        timerInterval = secondsLeft - 10
+        secondsLeft = secondsLeft - 10
         runningQuestionIndex++
         showQuestions()
     }
