@@ -99,11 +99,10 @@ function checkAnswer(answer){
 submitButton.addEventListener('click', function(event) {
     event.preventDefault()
     var initials= document.getElementById('initials')
-    var finalScore= document.getElementById('finalScore')
     initials = {
         initials: initials.value,
-        finalScore: finalScore.value,
+        secondsLeft: secondsLeft.value,
     }
     localStorage.setItem('initials', JSON.stringify(initials));
-    localStorage.setItem('finalScore', finalScore);
+    localStorage.setItem('secondsLeft', secondsLeft);
 })
