@@ -8,6 +8,7 @@ var option2 = document.getElementById('option2')
 var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var quiz = document.getElementById('quiz')
+var submitButton = document.getElementById('submit')
 
 var questions = [
     {
@@ -94,3 +95,14 @@ function checkAnswer(answer){
         showQuestions()
     }
 }
+
+submitButton.addEventListener('click', function(event) {
+    event.preventDefault()
+    var initials= document.getElementById('initials')
+    initials = {
+        initials: initials.value,
+        finalScore: finalScore.value,
+    }
+    localStorage.setItem('initials', JSON.stringify(initials));
+    // renderMessage();
+})
