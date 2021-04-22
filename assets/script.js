@@ -50,13 +50,17 @@ var questions = [
         showQuestions();
     })
 
+    var timerInterval
 function setTime() {
     timerInterval = setInterval(function() {
     secondsLeft--;
-    timer.textContent= "Time:" + secondsLeft;
+     if (secondsLeft >= 0) {
+         span = document.getElementById('timer')
+         span.innerHTML = secondsLeft
+     }
     if(secondsLeft === 0) {
         alert("Sorry, we are out of time!")
-    clearInterval(timerInterval);
+        clearInterval(timerInterval);
     }
     }, 1000)
 }
@@ -69,13 +73,14 @@ function showQuestions() {
         quiz.style.display = "none"
         finalScore.style.display = "block"
         finalScore.innerHTML = "Your final score" + " " + secondsLeft
+        clearInterval(timerInterval);
     } else {
-    var q = questions[runningQuestionIndex]
-    selectedQuestions.innerHTML = q.questions
-    option1.innerHTML = q.option1
-    option2.innerHTML = q.option2
-    option3.innerHTML = q.option3
-    option4.innerHTML = q.option4
+        var q = questions[runningQuestionIndex]
+        selectedQuestions.innerHTML = q.questions
+        option1.innerHTML = q.option1
+        option2.innerHTML = q.option2
+        option3.innerHTML = q.option3
+        option4.innerHTML = q.option4
     }
 }
 
