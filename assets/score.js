@@ -36,5 +36,5 @@ if(resetHStn === null){
 }else{
 resetHStn.addEventListener('click', function(){
     localStorage.clear();
-    document.getElementById('playerList').innerHTML = ""
+    document.getElementById('highScore').innerHTML = ""
 })};
