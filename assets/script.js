@@ -9,6 +9,7 @@ var option3 = document.getElementById('option3')
 var option4 = document.getElementById('option4')
 var quiz = document.getElementById('quiz')
 var submitButton = document.getElementById('submit')
+var localScores = []
 
 var questions = [
     {
@@ -97,12 +98,28 @@ function checkAnswer(answer){
 }
 
 submitButton.addEventListener('click', function(event) {
-    event.preventDefault()
-    var initials= document.getElementById('initials')
-    initials = {
-        initials: initials.value,
-        secondsLeft: secondsLeft.value,
-    }
-    localStorage.setItem('initials', JSON.stringify(initials));
-    localStorage.setItem('userScore', secondsLeft);
+    event.preventDefault();
+    localStorageScores();
+    alert("Check to see if you made the high scores!")
 })
+
+function localStorageScores(){
+    var initials = document.getElementById('initials').value;
+
+    var checkLocal = JSON.parse(localStorage.getItem('scores'));
+
+    if (secondsLeft < 0) {
+        secondsLeft = 0;
+    }
+    if (checkLocal === null) {
+        localScores = [{
+            playerInitials: initials.trim(),
+            userScore: secondsLeft}]
+        
+    }else {
+        localScores = checkLocal.concat([{
+            playerInitials: initials.trim(),
+            userScore: secondsLeft}])
+    }
+    localStorage.setItem('scores', JSON.stringify(localScores))
+}
