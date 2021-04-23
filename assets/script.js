@@ -1,6 +1,7 @@
 var startButton = document.getElementById('startButton')
 var timer = document.getElementById('timer')
 var secondsLeft = 75;
+var container = document.getElementById('container')
 var optionBox = document.querySelector('.options')
 var selectedQuestions = document.getElementById('question')
 var option1 = document.getElementById('option1')
@@ -73,7 +74,7 @@ var runningQuestionIndex = 0
 
 function showQuestions() {
     if(runningQuestionIndex > lastQuestionIndex){
-        quiz.style.display = "none"
+        container.style.display = "none"
         submitForm.removeAttribute('hidden');
         finalScore.removeAttribute('hidden');
         finalScore.innerHTML = "Your final score" + " " + secondsLeft
