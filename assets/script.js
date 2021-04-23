@@ -10,6 +10,7 @@ var option4 = document.getElementById('option4')
 var quiz = document.getElementById('quiz')
 var submitButton = document.getElementById('submit')
 var localScores = []
+var submitForm = document.getElementById('submit-form')
 
 var questions = [
     {
@@ -73,7 +74,8 @@ var runningQuestionIndex = 0
 function showQuestions() {
     if(runningQuestionIndex > lastQuestionIndex){
         quiz.style.display = "none"
-        finalScore.style.display = "block"
+        submitForm.removeAttribute('hidden');
+        finalScore.removeAttribute('hidden');
         finalScore.innerHTML = "Your final score" + " " + secondsLeft
         clearInterval(timerInterval);
     } else {
