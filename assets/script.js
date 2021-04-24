@@ -86,6 +86,7 @@ function showQuestions() {
         finalScore.removeAttribute('hidden');
         finalScore.innerHTML = "Your final score" + " " + secondsLeft
         clearInterval(timerInterval);
+        timer.style.display = "none"
     } else {
         var q = questions[runningQuestionIndex]
         selectedQuestions.innerHTML = q.questions
