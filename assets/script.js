@@ -15,33 +15,33 @@ var submitForm = document.getElementById('submit-form')
 
 var questions = [
     {
-    questions: "What is my name?",
-    option1: "Kyle",
-    option2: "Emmett",
-    option3: "Brandon",
-    option4: "Kent",
+    questions: "How many infinity stones are there?",
+    option1: "4",
+    option2: "7",
+    option3: "6",
+    option4: "5",
+    answer: "option3"
+    },{
+    questions: "Who is Tony Stark's Father?",
+    option1: "Kenneth Stark",
+    option2: "Howard Stark",
+    option3: "Richard Stark",
+    option4: "He didn't know his father",
     answer: "option2"
     },{
-    questions: "What is my namee?",
-    option1: "Kyle",
-    option2: "Emmett",
-    option3: "Brandon",
-    option4: "Kent",
-    answer: "option2"
+    questions: "What type of doctor is Doctor Strange?",
+    option1: "Neurosurgeon",
+    option2: "ER",
+    option3: "Radiologist",
+    option4: "Dentist",
+    answer: "option1"
     },{
-    questions: "What is my nameee?",
-    option1: "Kyle",
-    option2: "Emmett",
-    option3: "Brandon",
-    option4: "Kent",
-    answer: "option2"
-    },{
-    questions: "What is my nameeee?",
-    option1: "Kyle",
-    option2: "Emmett",
-    option3: "Brandon",
-    option4: "Kent",
-    answer: "option2"
+    questions: "On what planet was the Soul Stone in Infinity War?",
+    option1: "It was found in a black hole",
+    option2: "Mars",
+    option3: "Earth",
+    option4: "Vormir",
+    answer: "option4"
     },
 ]
 
