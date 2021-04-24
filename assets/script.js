@@ -49,7 +49,6 @@ var questions = [
 //listens for the users click and runs the functions
 
     startButton.addEventListener('click', function() {
-        console.log(startButton);
         document.getElementById('quiz').hidden=true;
         document.getElementById('startButton').hidden=true;
         document.getElementsByTagName("div")[0].style.display= "block";
