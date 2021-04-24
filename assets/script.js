@@ -22,28 +22,28 @@ var questions = [
     option2: "seven",
     option3: "six",
     option4: "five",
-    answer: "option3"
+    answer: "six"
     },{
     questions: "Who is Tony Stark's Father?",
     option1: "Kenneth Stark",
     option2: "Howard Stark",
     option3: "Richard Stark",
     option4: "He didn't know his father",
-    answer: "option2"
+    answer: "Howard Stark"
     },{
     questions: "What type of doctor is Doctor Strange?",
     option1: "Neurosurgeon",
     option2: "ER",
     option3: "Radiologist",
     option4: "Dentist",
-    answer: "option1"
+    answer: "Neurosurgeon"
     },{
     questions: "On what planet was the Soul Stone in Infinity War?",
     option1: "It was found in a black hole",
     option2: "Mars",
     option3: "Earth",
     option4: "Vormir",
-    answer: "option4"
+    answer: "Vormir"
     },
 ]
 //listens for the users click and runs the functions
