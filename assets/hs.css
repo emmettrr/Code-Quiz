@@ -7,3 +7,7 @@ body {
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(130,227,247,1) 100%);
 }
+
+#highScore{
+    list-style: none;
+}
