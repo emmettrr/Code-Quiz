@@ -14,7 +14,7 @@ for (let index = 0; index < endScores.length; index++) {
 }}
 
 //compares current score with new incoming score and sets
-function betterThan(a,b){
+function betterThan(){
     if (a.userScore < b.userScore){
         return 1;
     }
