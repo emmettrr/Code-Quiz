@@ -18,10 +18,10 @@ var submitForm = document.getElementById('submit-form')
 var questions = [
     {
     questions: "How many infinity stones are there?",
-    option1: "4",
-    option2: "7",
-    option3: "6",
-    option4: "5",
+    option1: "four",
+    option2: "seven",
+    option3: "six",
+    option4: "five",
     answer: "option3"
     },{
     questions: "Who is Tony Stark's Father?",
