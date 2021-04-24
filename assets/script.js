@@ -13,6 +13,8 @@ var submitButton = document.getElementById('submit')
 var localScores = []
 var submitForm = document.getElementById('submit-form')
 
+//questions array
+
 var questions = [
     {
     questions: "How many infinity stones are there?",
@@ -44,6 +46,7 @@ var questions = [
     answer: "option4"
     },
 ]
+//listens for the users click and runs the functions
 
     startButton.addEventListener('click', function() {
         console.log(startButton);
@@ -53,6 +56,8 @@ var questions = [
         setTime();
         showQuestions();
     })
+
+//timer function
 
     var timerInterval
 function setTime() {
@@ -68,6 +73,8 @@ function setTime() {
     }
     }, 1000)
 }
+
+//question function to show the questions in quiz
 
 var lastQuestionIndex = questions.length - 1
 var runningQuestionIndex = 0
@@ -89,6 +96,8 @@ function showQuestions() {
     }
 }
 
+//runs a function to check to see if answers are correct
+
 function checkAnswer(answer){
     if(questions[runningQuestionIndex].answer === answer){
         runningQuestionIndex++
@@ -105,6 +114,9 @@ submitButton.addEventListener('click', function(event) {
     localStorageScores();
     alert("Check to see if you made the high scores!")
 })
+
+//adds user score and initials to local storage
+
 
 function localStorageScores(){
     var initials = document.getElementById('initials').value;
