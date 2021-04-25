@@ -19,3 +19,7 @@
 
 ### Example 3
 ![Example 3](/assets/images/question.png)
+<br>
+<br>
+
+[Deploy to the quiz](https://emmettrr.github.io/Code-Quiz/)
